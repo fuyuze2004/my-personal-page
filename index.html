@@ -8,136 +8,114 @@
 	
 		<center><h1>Yuze Fu</h1></center>
 		
-		<p>Welcome to my personal page. <a href="documents/Resume.pdf"><button>View my resume (Last updated on Jan 27, 2025)</button></a></p>
+		<p>Welcome to my personal page. <a href="documents.html"><button>Jump to my CV (Last updated on December, 2025)</button></a></p>
 		<h2><u>Contents</u></h2>
 		<ul>
 			<li><a href="#me">About me</a>
-			<li><a href="#projects">Projects</a>
-			<li><a href="#experiences">Experiences</a>
-			<li><a href="#education">Education</a>
+			<li><a href="#portfolio">Portolio</a>
+			<li><a href="#gallery">Gallery</a>
 			<li><a href="#contact">Contact</a>
 		</ul>
 		
+
 		<a name="me"></a>
 		<hr><hr><h2>About me</h2>
 		<img src="images/my-photo.jpg" alt="My photo" width="283" height="290">
-		<h3>Biograpy</h3>
-		<p>I am Yuze Fu, a dedicated second-year student at the University of Toronto, pursuing an Honors Bachelor 
-		of Science with dual specializations in Mathematics and Computer Science. My academic journey is driven by a passion 
-		for problem-solving and a strong foundation in programming, particularly in C and Python. My experiences range from 
-		winning a prestigious award in the National Olympiad in Informatics to developing creative solutions through 
-		hackathons. Beyond academics, I have honed my skills in data analysis, front-end development, and even 3D modeling. I 
-		am continuously expanding my knowledge in these areas and am particularly interested in applying this knowledge to 
-		real-world problems, as evidenced by my participation in projects like developing a mentorship matching system for 
-		university freshmen. With a CGPA of 4.0, I am committed to excellence and am eager to contribute to innovative projects 
-		that bridge the gap between technology and practical application.</p>
-		<h3>Skills</h3>
+		<p>My name is Yuze (or Lucas), a third-year student in University of Toronto. I double 
+			majored in mathematics and computer science, aiming for a PhD degree in the future. Currently, I am 
+			interested in algebraic number theory and probabilistic graph thoery. Also, I am keen on bridging 
+			real-world problems with abstract theories by using machine learning.</p>
+		<p>"读万卷书，行万里路。 -- 司马迁 《史记》" This sentence is from a Chinese history book writen 2000 years ago, 
+			meaning that True wisdom is born from the union of deep knowledge gained through study and profound 
+			understanding earned from real-world experience. Travelling is a must of my every holiday.
+		<p>Gaming also plays an important role in my life. I mainly play two types of game: sandbox and rpg. My 
+			favourite sandbox game is <i>Minecraft</i> which accompanies me since 2012. <i>Legend of Zelda: Breath of 
+				the Wild</i> is my best rpg game forever, still fascinating me time after time (I replay the whole 
+				game at least 5 times).
+		
+
+		<a name="portfolio"></a>
+		<hr><h2>Portfolio <a href="https://github.com/fuyuze2004">
+		<button>My Github</button></a></h2>
+
+		<h3>Machine Learning-Driven NSI Forecasting for Toronto Neighborhoods <a href="documents/CSCC11_Final_Report_Group1.pdf">
+		<button>Report</button></a></h3>
+		<p><i>November 2025</i></p>
 		<ul>
-			<li><strong>Programming Languages: </strong>C, Python, R</li>
-			<li><strong>Data Analysis: </strong>
-			Proficient in data structures, algorithms, and elementary data analysis using R</li>
-			<li><strong>Front-End Development: </strong>
-			Skilled in HTML, CSS, and Figma for UI/UX design and personal website creation</li>
-			<li><strong>3D Modeling: </strong>Basic abilities using Autodesk software</li>
-			<li><strong>Office Software: </strong>Expert-level proficiency in Microsoft Office Suite</li>
-			<li><strong>Project Management: </strong>
-			Experience in leading project teams and conducting background research and usability tests</li>
-			<li><strong>Hackathons and Competitions: </strong>
-			Participated in various hackathons and won awards in programming competitions like the National Olympiad in 
-			Informatics</li>
+			<li><strong>Tools Used: </strong>Python, sklearn, PyTorch, SARIMA, Latex (for report)</li>
+			<li>Developed predictive models for monthly neighborhood safety using 100K+ crime records, achieving 0.0527 RMSE
+(best) through LSTM architecture that captures 12-month temporal patterns across 159 Toronto neighborhoods</li>
+			<li>Engineered Neighborhood Safety Index (NSI) using severity-weighted crime aggregation and temporal features
+(lagged values, rolling averages) to transform raw incident data into actionable safety metrics</li>
+			<li>Compared 6 ML approaches (Ridge, KNN, FNN, LSTM, SARIMA) through systematic hyperparameter tuning; LSTM
+achieved 82.95% R² while Ridge Regression provided interpretable coefficients for policy applications</li>
+		</ul>
+
+		<h3>Virtual Memory and File System Implementations for Operating System</h3>
+		<p><i>May - July 2025</i></p>
+		<ul>
+			<li><strong>Tools Used: </strong>C, Pintos, Docker</li>
+			<li>Threads: Used Multilevel Queue Scheduling and Priority Donation to optimize Context Switching</li>
+			<li>User Programs: Implemented all basic system calls triggered by interrupts through Stack</li>
+			<li>Virtual Memory: Created Supplemental Page Table, Frame, Swap and Eviction Algorithm to support paging</li>
+			<li>File System: Chosed Multilevel Indexed File to support flexible file operation and implemented Directory</li>
+			<li>Sychronization: Tried both Lock and Semaphore to deal with different situations</li>
+		</ul>
+
+		<h3>Firefighters - Assembly Platform Game <a href="https://github.com/fuyuze2004/Firefighter">
+		<button>Repo</button></a></h3>
+		<p><i>April 2025</i></p>
+		<ul>
+			<li><strong>Tools Used: </strong>Assembly, Computer Organization, MARS</li>
+			<li>Move the firefighter to save injured people withoug touching the fire, and approach the exit as you can</li>
+			<li>Implemented Bitmap for display, MMIO Simulator for input</li>
+			<li>Actively used registers for efficient operation, and stack for function calling</li>
 		</ul>
 		
-		<a name="projects"></a>
-		<hr><h2>Projects</h2>
+		<h3>Linux OS Monitoring Tool & FD Table Creator <a href="https://github.com/fuyuze2004/System-Monitoring-Tool">
+		<button>Repo 1</button></a> <a href="https://github.com/fuyuze2004/OS-FD-Creator">
+		<button>Repo 2</button></a></h3>
+		<p><i>April 2025</i></p>
+		<ul>
+			<li><strong>Tools Used: </strong>C, Linux, System Programming</li>
+			<li>Demonstrated real-time RAM usage, CPU usage by line charts and File Descriptor table</li>
+			<li>Captured information from Linux OS files and created diagrams, such as reading CPU usage time from "/proc/stat",
+then calculating the real-time usage into 100%, and plotting onto the chart</li>
+			<li>Implemented pipes to enhance the performance by concurrency, and reinstalled signal handlers to fit the needs</li>
+			<li>Modular codes with the use of makefile, and detailed documentation including README and docstring</li>
+		</ul>
+
+		<h3>Fungi Image Classification & Denoising <a href="https://github.com/A-Skvortsov/DS3-Datathon-2025">
+		<button>Repo</button></a></h3>
+		<p><i>March 2025</i></p>
+		<ul>
+			<li><strong>Tools Used: </strong>Python, PyTorch, CNN</li>
+			<li>Developed a classifier achieving 93.8% accuracy on a 5-class, 3,000+ image fungi dataset using GPU acceleration.</li>
+			<li>Implemented a denoising autoencoder with transposed convolutions to preprocess corrupted images.</li>
+			<li>Built a custom data pipeline with augmentation for memory-efficient loading and batch processing.</li>
+			<li>Performed noise analysis and statistical characterization to optimize preprocessing and enhance performance.</li>
+		</ul>
+
 		<h3>Automatic Lawn Sprinkler Irrigation System 
 		<a href="documents/Automatic Lawn Sprinkler Irrigation System.pdf">
-		<button>View my work (Chinese)</button></a></h3>
+		<button>Report (Chinese)</button></a></h3>
 		<p><i>July 2021</i></p>
 		<ul>
 			<li><strong>Tools Used: </strong>Python, KNN (K-Nearest Neighbor), Barrel distortion correction, OpenCV</li>
-			<li>Designed an automatic lawn irrigation system using machine learning in Python.</li>
-			<li>Built the project in just two days as part of Intel AI for Youth Express.</li>
-			<li>Implemented predictive algorithms to optimize water usage based on environmental data.</li>
+			<li>Engineered a smart sprinkler system using a KNN machine learning model (Python, OpenCV) to analyze lawn
+images and enable targeted, water-efficient irrigation.</li>
+			<li>Achieved 80%+ accuracy in classifying lawn hydration levels by processing RGB image data and implementing
+grid-based analysis.</li>
+			<li>Designed end-to-end system architecture from image capture to sprinkler control.</li>
 		</ul>
-		<h3>I’MENU – OCR and AI-Powered Restaurant Menu App
-		<a href="documents/I’MENU.pdf"><button>View my work</button></a></h3>
-		<p><i>October 2023</i></p>
-		<ul>
-			<li><strong>Tools Used: </strong>Python, JavaScript, OpenAI, OCR (Optical Character Recognition)</li>
-			<li>Collaborated with a team during the Hack the Valley 8 hackathon to create an app that helps users better 
-			understand restaurant menus.</li>
-			<li>Integrated OCR to scan and interpret menus, and used OpenAI for providing menu descriptions and 
-			recommendations.</li>
-		</ul>
-		<h3>Research Project: Ministry of Colleges and Universities’ Research Investments 
-		<a href="documents/Ministry of Colleges and Universities’ Research Investments.pdf">
-		<button>view my work</button></a></h3>
-		<p><i>April 2024</i></p>
-		<ul>
-			<li><strong>Tools Used: </strong>R, Tidyverse, ggplot2</li>
-			<li>Analyzed the “ontario-research-funding-summary” dataset using R programming and third-party libraries.</li>
-			<li>Led a team of 3 students in writing a detailed report on research investments in Toronto.</li>
-		</ul>
-		<h3>MentorU – Mentorship Matching System <a href="documents/MentorU.pdf"><button>View my work</button></a></h3>
-		<p><i>May 2024 – August 2024</i></p>
-		<ul>
-			<li><strong>Tools Used: </strong>Figma, User Research, Usability Testing</li>
-			<li>Developed an app interface using Figma to match university freshmen with mentors.</li>
-			<li>Conducted background research through surveys and interviews to identify user needs.</li>
-			<li>Improved user experience by iterating on the design through multiple usability tests.</li>
-		</ul>
-		
-		<a name="experiences"></a>
-		<hr><h2>Experiences</h2>
-		<h3>Teaching Assistant (CSCA67: Discrete Math) | University of Toronto Scarborough</h3>
-		<p><i>September 2024 - December 2024</i></p>
-		<ul>
-			<li>Prepared and conducted weekly 1-hour tutorials to reinforce students' understanding of discrete math 
-			through additional exercises and guided problem-solving.</li>
-			<li>Held weekly office hours to provide personalized support, answering course-related questions and 
-			clarifying complex concepts.</li>
-			<li>Collaborated with instructors in grading quizzes, assignments, term tests, and the final exam, providing 
-			detailed feedback to help students improve their performance.</li>
-		</ul>
-		<h3>R&amp;D Director (Computer Science Enrichment Club) | University of Toronto Scarborough</h3>
-		<p><i>September 2024 - May 2025</i></p>
-		<ul>
-			<li>Formed and led a research paper reading group focused on edge technology, hosting monthly 
-			meetings to facilitate discussions on emerging trends and advancements in the field.</li>
-			<li>Organized and coordinated guest speaker sessions by inviting professors and industry professionals 
-			to give talks, providing members with insights from both academic and industry perspectives.</li>
-			<li>Collaborated with group members to select and review research papers, fostering an environment 
-			of intellectual growth and knowledge sharing.</li>
-		</ul>
-		
-		<a name="education"></a>
-		<hr><h2>Education</h2>
-		<p><strong>Honors Bachelor of Science (Co-op) | University of Toronto</strong>
-		<a href="documents/Academic History.pdf"><button>View my Academic History</button></a></p>
-		<p><i>September 2023 – Present</i></p>
-		<ul>
-			<li><strong>Specializations: </strong>
-			Mathematics Specialist (Comprehensive Stream), Computer Science Specialist (Comprehensive Stream)</li>
-			<li><strong>Minor: </strong>Economics for Management Studies</li>
-			<li><strong>CGPA: </strong>3.98</li>
-			<li><strong>Honors: </strong>University of Toronto Scholar (2023-2024)</li>
-		</ul>
-		<p><strong>Relevant Coursework: </strong></p>
-		<ul>
-			<li><strong>Introduction to Computer Science I & II: </strong>
-			Developed proficiency in Python and C, including creating a 2048 game and analyzing the strengths of each 
-			programming language.</li>
-			<li><strong>Discrete Mathematics: </strong>
-			Acquired foundational knowledge in logical reasoning, combinatorics, and graph theory.</li>
-			<li><strong>Calculus I & II for Mathematical Sciences: </strong>
-			Mastered fundamental calculus concepts with applications in mathematical sciences.</li>
-			<li><strong>Introduction to Data Science: </strong>
-			Practiced data analysis using R, focusing on variance, distribution, and advanced methods like decision trees and 
-			random forests.</li>
-			<li><strong>Designing Systems for Real World Problems: </strong>
-			Engaged in an intensive design project focused on developing a mentorship matching system for university freshmen, 
-			using Figma for UI/UX design and conducting usability testing.</li>
-		</ul>
+
+
+		<a name="Gallery"></a>
+		<hr><h2>Gallery (Under Construction)</h2>
+		<h3>Soccer</h3>
+		<h3>Hiking</h3>
+		<h3>Datathon Winning</h3>
+
 		
 		<a name="contact"></a>
 		<hr><h2>Contact</h2>
