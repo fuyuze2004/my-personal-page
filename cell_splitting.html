@@ -3,41 +3,36 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>My personal page</title>
+		<title>Conservative Cell Splitting | Yuze Fu</title>
 		<style>
 			body {
 				max-width: 900px;
 				margin: 0 auto;
 				padding: 40px;
 			}
-			.about-me {
-				display: flex;
-				align-items: flex-start;
-				gap: 24px;
+			.subtitle {
+				text-align: center;
+				color: #333;
+				margin-top: -8px;
 			}
-			.about-me img {
-				flex-shrink: 0;
-				max-width: 100%;
-				height: auto;
+			.links {
+				text-align: center;
 			}
-			.about-me .about-text {
-				flex: 1;
+			figure {
+				margin: 24px 0;
 			}
-			.videos {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 24px;
-			}
-			.video-item {
-				flex: 1;
-				min-width: 280px;
-			}
-			.video-item video {
+			figure img,
+			figure video {
+				display: block;
 				width: 100%;
 				height: auto;
 				border-radius: 6px;
 			}
-			.video-item figcaption {
+			figure.teaser img {
+				max-width: 480px;
+				margin: 0 auto;
+			}
+			figcaption {
 				margin-top: 8px;
 				text-align: center;
 				color: #555;
@@ -46,34 +41,66 @@
 				body {
 					padding: 20px;
 				}
-				.about-me {
-					flex-direction: column;
-					align-items: center;
-				}
-				.about-me img {
-					align-self: center;
-				}
 			}
 		</style>
 	</head>
 	<body>
-		<center><h1>Conservative Cell Splitting for Compressible Moving-Mesh Fluid Simulation (On-going)</h1></center>
+		<p><a href="index.html">&larr; Back to home</a></p>
 
-		<div class="videos">
-			<figure class="video-item">
-				<video controls loop muted playsinline>
-					<source src="videos/gresho_slow.mp4" type="video/mp4">
-					Your browser does not support the video tag.
-				</video>
-				<figcaption>Gresho vortex</figcaption>
-			</figure>
-			<figure class="video-item">
-				<video controls loop muted playsinline>
-					<source src="videos/linear_tube_slow.mp4" type="video/mp4">
-					Your browser does not support the video tag.
-				</video>
-				<figcaption>Linear tube</figcaption>
-			</figure>
-		</div>
+		<center><h1>Conservative Cell Splitting for Compressible Moving-Mesh Fluid Simulation</h1></center>
+		<p class="subtitle"><strong>Yuze Fu</strong><br>
+			Advised by Prof. Eitan Grinspun and Jonathan Panuelos<br>
+			Dynamic Graphics Project, University of Toronto</p>
+		<p class="links"><a href="documents/Yuze_Fu_poster.pdf" target="_blank">[Poster]</a> &emsp;
+			<a href="documents/Yuze_Fu_slides.pdf" target="_blank">[Slides]</a></p>
+
+		<figure class="teaser">
+			<img src="images/cell_splitting/teaser.jpg" alt="Supersonic flow past an obstacle on an adaptive moving Voronoi mesh">
+			<figcaption>Supersonic flow past an obstacle on a moving Voronoi mesh refined by our splitting.</figcaption>
+		</figure>
+
+		<h2>Abstract</h2>
+		<p>Moving-mesh solvers let their Voronoi cells move with the flow, but in expanding regions the cells
+			grow and must be split to keep resolution. The standard split shares the parent's state between
+			its two daughters by volume. This conserves mass, but it introduces an error that does not shrink
+			as the mesh is refined. We instead transfer mass, momentum and energy through the exact geometric
+			overlap between the old and new cells, with a linear reconstruction that makes the transfer exact
+			for linear fields. The method conserves to round-off and is second-order accurate. On an
+			expanding-flow benchmark it has the lowest density error per cell among five fluid codes, and
+			behind a supersonic obstacle it keeps the recirculating wake that is lost without splitting.</p>
+
+		<h2>Results</h2>
+		<figure>
+			<video autoplay loop muted playsinline>
+				<source src="videos/wake_mach2.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+			<figcaption>Mach 2 flow past a circular obstacle (red: backflow). Without splitting the cells behind
+				the obstacle drain and the wake is lost; with our splitting the recirculation zone is kept,
+				with half the velocity error of no splitting against the fixed-mesh reference.</figcaption>
+		</figure>
+
+		<figure>
+			<img src="images/cell_splitting/baselines.png" alt="Density error versus number of cells for five fluid codes">
+			<figcaption>Expanding-flow benchmark: density error against the number of cells, compared with
+				AREPO, Athena++ (adaptive mesh refinement), GIZMO and Gasoline.</figcaption>
+		</figure>
+
+		<h2>Background: splitting in AREPO</h2>
+		<figure>
+			<video autoplay loop muted playsinline>
+				<source src="videos/arepo_split.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+			<figcaption>A cell split in AREPO: the new cell is placed almost on top of its parent, and mesh
+				regularization moves the pair apart over the following time steps.</figcaption>
+		</figure>
+
+		<h2>Presentations</h2>
+		<ul>
+			<li><strong>GRAPHQUON 2026</strong> (Quebec&ndash;Ontario pre-SIGGRAPH workshop), McGill University, Oct 2026. Technical talk.</li>
+			<li><strong>2026 CMS Undergraduate Research Symposium</strong>, University of Toronto Scarborough, Oct 2026. Technical talk, <strong>Best Oral Presentation</strong>.</li>
+			<li><strong>2026 DCS Undergraduate Summer Research Showcase</strong>, University of Toronto, Aug 2026. Poster, <strong>Finalist</strong>.</li>
+		</ul>
 	</body>
 </html>
